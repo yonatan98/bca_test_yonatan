@@ -4,9 +4,6 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -26,6 +23,9 @@ import com.example.bca_test_yonatan.domain.model.Song
 import com.example.bca_test_yonatan.viewmodel.SongListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
+import androidx.compose.foundation.layout.*
+import com.example.bca_test_yonatan.data.model.SongData
+
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
@@ -39,16 +39,15 @@ class MainActivity : ComponentActivity() {
                 },
                 content = { SongListContent() }
             )
-
         }
     }
 }
 
 @Composable
 fun SongListContent() {
-    val viewModel: SongListViewModel = viewModel()
-    val songs by viewModel.songs.observeAsState(initial = emptyList())
-
+//    val viewModel: SongListViewModel = viewModel()
+//    val songs by viewModel.songs.observeAsState(initial = emptyList())
+//
 //    LazyColumn {
 //        items(songs) { song ->
 //            SongItem(song)

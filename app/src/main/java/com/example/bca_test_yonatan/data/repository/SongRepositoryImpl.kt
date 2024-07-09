@@ -3,6 +3,7 @@ package com.example.bca_test_yonatan.data.repository
 import android.util.Log
 import com.example.bca_test_yonatan.data.mapper.toDomainModel
 import com.example.bca_test_yonatan.data.model.SongData
+import com.example.bca_test_yonatan.data.model.SongResponse
 import com.example.bca_test_yonatan.data.network.ApiService
 import com.example.bca_test_yonatan.domain.model.Song
 import com.example.bca_test_yonatan.domain.repository.SongRepository
@@ -12,12 +13,13 @@ import org.json.JSONObject
 
 class SongRepositoryImpl(private val apiService: ApiService) : SongRepository {
     override suspend fun getSong(): List<Song> {
-        val jsonData = apiService.getSongs()
+        val jsonData: SongResponse = apiService.getSongs()
         Log.d("TAG", jsonData.toString())
 
-        val songs : List<SongData> = mapJsonToSongData(jsonData.toString())
-        val finalResult = songs.map { it.toDomainModel() }
+        val songsList: List<SongData> = jsonData.results
 
+        val finalResult: List<Song> = songsList.map { it.toDomainModel() }
+        Log.d("TAG", finalResult.toString())
         return finalResult
     }
 }

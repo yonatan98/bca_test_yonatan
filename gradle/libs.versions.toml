@@ -2,8 +2,11 @@
 agp = "8.5.0"
 converterGson = "2.9.0"
 dagger = "2.51.1"
+gradle = "8.1.4"
 gson = "2.11.0"
 hiltAndroid = "2.47"
+hiltAndroidCompiler = "2.48"
+hiltAndroidVersion = "2.39"
 hiltLifecycleViewmodel = "1.0.0-alpha03"
 hiltNavigationCompose = "1.0.0"
 kotlin = "1.9.0"
@@ -12,6 +15,7 @@ junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 appcompat = "1.7.0"
+kotlinGradlePlugin = "1.9.0"
 material = "1.12.0"
 activity = "1.9.0"
 constraintlayout = "2.1.4"
@@ -29,13 +33,17 @@ androidx-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedat
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
 dagger-lint = { module = "com.google.dagger:dagger-lint", version.ref = "dagger" }
+gradle = { module = "com.android.tools.build:gradle", version.ref = "gradle" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
 hilt-android-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
+hilt-android-v239 = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroidVersion" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlinGradlePlugin" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
